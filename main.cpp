@@ -1,6 +1,7 @@
 #include <iostream>
 #include <climits>
 #include <string>
+#include <iomanip>
 using namespace std;
 
 
@@ -44,8 +45,9 @@ enum Place {
     BHATBHATENI,
     LAINCHAUR,
     THAMEL,
+    SORHAKHUTTE,
     JAMAL,
-    KESHER_MAHAL,
+    KESHAR_MAHAL,
     RATNAPARK,
     NEW_ROAD,
     BHADRAKALI,
@@ -58,7 +60,7 @@ enum Place {
     LAGANKHEL,
     SATDOBATO,
     GWARKO,
-    IMAADOL,
+    IMADOL,
     NAKHU,
     EKANTAKUNA,
     BHAISEPATI,
@@ -84,6 +86,7 @@ enum Place {
     NAGARJUN,
     TAHACHAL,
     GYANESHWOR,
+    ANAMNAGAR,
     DILLIBAZAR,
     BAGBAZAR,
     SINGH_DURBAR,
@@ -135,8 +138,9 @@ string placeName[PLACE_COUNT] = {
     "Bhatbhateni",
     "Lainchaur",
     "Thamel",
+    "Sorhakhutte",
     "Jamal",
-    "Kesher Mahal",
+    "Keshar Mahal",
     "Ratnapark",
     "New Road",
     "Bhadrakali",
@@ -175,6 +179,7 @@ string placeName[PLACE_COUNT] = {
     "Nagarjun",
     "Tahachal",
     "Gyaneshwor",
+    "Anamnagar",
     "Dillibazar",
     "Bagbazar",
     "Singh Durbar",
@@ -200,7 +205,8 @@ public:
 
         vertices = v;
 
-        // Initially, there is no edge between any places
+        // Initially, there is no edge
+        // between any places
         for (int i = 0; i < vertices; i++) {
 
             for (int j = 0; j < vertices; j++) {
@@ -240,7 +246,7 @@ public:
         }
 
 
-        // Distance from source to itself is 0
+        // Distance from source to itself
         distance[source] = 0;
 
 
@@ -252,8 +258,8 @@ public:
             double minimum = INT_MAX;
 
 
-            // Find the unvisited node
-            // having the smallest distance
+            // Find unvisited node
+            // having smallest distance
             for (int i = 0; i < vertices; i++) {
 
                 if (!visited[i] && distance[i] < minimum) {
@@ -274,7 +280,7 @@ public:
             visited[u] = true;
 
 
-            // Check all possible neighboring nodes
+            // Check all neighboring nodes
             for (int v = 0; v < vertices; v++) {
 
                 if (adj[u][v] != 0 && !visited[v]) {
@@ -306,12 +312,14 @@ public:
 
 
         // Display shortest distance
+        cout << fixed << setprecision(2);
+
         cout << "\nShortest Distance: "
              << distance[destination]
              << " km" << endl;
 
 
-        // Store the shortest path
+        // Store shortest path
         int path[PLACE_COUNT];
 
         int pathLength = 0;
@@ -334,7 +342,7 @@ public:
         cout << "Shortest Path: ";
 
 
-        // Print path in reverse
+        // Print path in correct order
         for (int i = pathLength - 1; i >= 0; i--) {
 
             cout << placeName[path[i]];
@@ -350,16 +358,14 @@ public:
 
 int main() {
 
-    // Create graph with all the places
+    // Create graph
     Graph g(PLACE_COUNT);
 
 
     /*
-        ADDING ROADS
+        ALL ROADS ARE TWO-WAY.
 
-        Every road is TWO-WAY.
-
-        Therefore addEdge() automatically adds:
+        addEdge() automatically creates:
 
         A -> B
 
@@ -523,13 +529,13 @@ int main() {
     g.addEdge(LAINCHAUR, JAMAL, 1.20);
 
     // 52
-    g.addEdge(THAMEL, KESHER_MAHAL, 1.00);
+    g.addEdge(THAMEL, KESHAR_MAHAL, 1.00);
 
     // 53
     g.addEdge(THAMEL, SORHAKHUTTE, 1.40);
 
     // 54
-    g.addEdge(KESHER_MAHAL, RATNAPARK, 1.40);
+    g.addEdge(KESHAR_MAHAL, RATNAPARK, 1.40);
 
     // 55
     g.addEdge(JAMAL, RATNAPARK, 1.10);
@@ -586,7 +592,7 @@ int main() {
     g.addEdge(BALKUMARI, KOTESHWOR, 1.70);
 
     // 73
-    g.addEdge(GWARKO, IMAADOL, 2.00);
+    g.addEdge(GWARKO, IMADOL, 2.00);
 
     // 74
     g.addEdge(SATDOBATO, NAKHU, 2.00);
