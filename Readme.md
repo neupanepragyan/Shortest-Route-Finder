@@ -54,7 +54,7 @@ The unified, clean version of this compiled network map is available directly wi
 
 ## 🚀 Features
 
-- **Dijkstra's Algorithm:** Implemented in C++ using an adjacency list and a priority queue, with a time complexity of O((V + E) log V).
+- **Dijkstra's Algorithm:** Implemented in C++ using an adjacency matrix.
 - **Real Road Network Data:** Nodes and distances represent actual locations and roads in the Kathmandu Valley.
 - **Interactive Map:** Select locations by clicking nodes on the map or by using the dropdown menus.
 - **Path Highlighting:** The shortest route is highlighted on the map, and the total distance (in km) and the sequence of places are shown in the sidebar.
