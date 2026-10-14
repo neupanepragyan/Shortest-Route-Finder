@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shortest Route Finder</title>
+  <!-- Link external CSS stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <div class="map-wrap" id="mapWrap">
+    <div class="header">
+      <h1>Shortest <span>Route</span> Finder</h1>
+      <p>An interactive map of 85 real neighborhoods across the Kathmandu Valley, connected by 150 roads, that finds the shortest route between any two places using Dijkstra's algorithm. Click a node for your <b>start</b>, click another for your <b>destination</b> — or use the dropdowns — then find the shortest route. Scroll to zoom, drag to pan.</p>
+    </div>
+    <svg id="map" viewBox="130 10 750 520"></svg>
+    <div class="zoom-hint">85 places · 150 roads · Dijkstra's algorithm</div>
+    <div class="zoom-controls">
+      <button id="themeToggle" title="Switch day / night map">☾</button>
+      <button id="zoomIn">+</button>
+      <button id="zoomOut">−</button>
+      <button id="zoomReset">⤾</button>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="field">
+      <label>Start</label>
+      <select id="sourceSelect"></select>
+    </div>
+
+    <div class="swap-row">
+      <button class="swap-btn" id="swapBtn" title="Swap start/destination">⇅</button>
+      <div style="flex:1" class="field">
+        <label style="margin-bottom:6px">Destination</label>
+        <select id="destSelect"></select>
+      </div>
+    </div>
+
+    <button class="find-btn" id="findBtn">Find Shortest Path</button>
+    <button class="reset-btn" id="resetBtn">Clear selection</button>
+
+    <hr>
+
+    <div class="result" id="result">
+      <div class="dist" id="distText">— <span>km</span></div>
+      <div class="path-list" id="pathList"></div>
+    </div>
+    <div class="no-path" id="noPathMsg" style="display:none;"></div>
+
+    <hr>
+
+    <div class="legend">
+      <div class="row"><span class="dot" style="background:var(--gold)"></span> Start node</div>
+      <div class="row"><span class="dot" style="background:var(--brick)"></span> Destination node</div>
+      <div class="row"><span class="dot" style="background:var(--vermillion)"></span> Node on shortest path</div>
+      <div class="row"><span style="width:14px;height:2px;background:var(--vermillion-bright);display:inline-block"></span> Shortest route</div>
+      <div class="row"><span style="width:14px;height:1px;background:var(--road-bright);display:inline-block"></span> Road</div>
+    </div>
+
+    <div class="meta">Layout is an approximate relative placement of the valley's neighborhoods, built from the same graph as the original C++ program — distances and routing are exact, geography is illustrative rather than surveyed.</div>
+  </div>
+
+</div>
+
+<!-- Link external JavaScript file before closing body tag -->
+<script src="script.js"></script>
+</body>
+</html>
