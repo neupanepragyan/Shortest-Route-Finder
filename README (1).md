@@ -16,19 +16,21 @@ An interactive web application that finds and visualizes the shortest route betw
 
 ## 📜 Table of Contents
 
-- [About the Project](#-about-the-project)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [How It Works](#-how-it-works)
-- [Getting Started](#-getting-started)
-- [Usage](#-usage)
-- [Project Structure](#-project-structure)
-- [Future Improvements](#-future-improvements)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Author](#-author)
+- [About the Project](#about)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [How It Works](#how-it-works)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Future Improvements](#future-improvements)
+- [Contributing](#contributing)
+- [License](#license)
+- [Author](#author)
 
 ---
+
+<a id="about"></a>
 
 ## ℹ️ About the Project
 
@@ -40,6 +42,8 @@ The project has two parts:
 - A **browser-based visualizer** (`index.html`) that lets users pick a start and a destination, then shows the shortest path and its total distance on a map.
 
 ---
+
+<a id="features"></a>
 
 ## 🚀 Features
 
@@ -53,6 +57,8 @@ The project has two parts:
 
 ---
 
+<a id="tech-stack"></a>
+
 ## 💻 Tech Stack
 
 | Layer | Technology |
@@ -62,6 +68,8 @@ The project has two parts:
 | Algorithm | Dijkstra's Algorithm |
 
 ---
+
+<a id="how-it-works"></a>
 
 ## ⚙️ How It Works
 
@@ -73,6 +81,8 @@ The project has two parts:
 The same graph data used by the C++ program is embedded in `index.html`, so the web version works without running the C++ code.
 
 ---
+
+<a id="getting-started"></a>
 
 ## 🏁 Getting Started
 
@@ -87,7 +97,7 @@ The same graph data used by the C++ program is embedded in `index.html`, so the 
 
 2. Open `index.html` in any modern web browser (Chrome, Firefox, Edge, or Safari).
 
-You can also try the live version here: [https://neupanepragyan.github.io/Shortest-Route-Finder/](https://neupanepragyan.github.io/Shortest-Route-Finder/)
+You can also try the live version here: [https://neupanepragyan.github.io/Shortest-Route-Finder/index.html](https://neupanepragyan.github.io/Shortest-Route-Finder/index.html)
 
 ### Run the C++ Program (Optional)
 
@@ -101,6 +111,8 @@ g++ -std=c++17 main.cpp -o route_finder
 On Windows, run `route_finder.exe` instead of `./route_finder`.
 
 ---
+
+<a id="usage"></a>
 
 ## 🛠️ Usage
 
@@ -122,6 +134,8 @@ On Windows, run `route_finder.exe` instead of `./route_finder`.
 
 ---
 
+<a id="project-structure"></a>
+
 ## 📁 Project Structure
 
 ```text
@@ -134,6 +148,8 @@ Shortest-Route-Finder/
 
 ---
 
+<a id="future-improvements"></a>
+
 ## 🔮 Future Improvements
 
 - Load the road network from an external data file instead of embedding it.
@@ -142,6 +158,8 @@ Shortest-Route-Finder/
 - Display estimated travel time in addition to distance.
 
 ---
+
+<a id="contributing"></a>
 
 ## 🤝 Contributing
 
@@ -172,11 +190,15 @@ If you find a bug or have an idea, you can also [open an issue](https://github.c
 
 ---
 
+<a id="license"></a>
+
 ## ⚖️ License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 ---
+
+<a id="author"></a>
 
 ## 👤 Author
 
