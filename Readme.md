@@ -34,13 +34,20 @@ An interactive web application that finds and visualizes the shortest route betw
 
 ## ℹ️ About the Project
 
-Finding the shortest path between two places is a classic graph problem. This project models major intersections and landmarks of the Kathmandu Valley as **nodes** and the roads between them as **weighted edges**, where each weight is the road distance in kilometers.
+An interactive web application that finds and visualizes the shortest route between locations in the Kathmandu Valley road network. This repository accurately models the valley's transit layout using **85 unique nodes (locations)** and **150 interconnecting edges (road segments)** extracted from real-world regional measurements. The shortest path is computed dynamically using **Dijkstra's Algorithm**, and the result is displayed instantly on an interactive map in the browser. 
 
 The project has two parts:
 
 - A **C++ program** (`main.cpp`) that implements Dijkstra's Algorithm.
 - A **browser-based visualizer** (`index.html`) that lets users pick a start and a destination, then shows the shortest path and its total distance on a map.
 
+## Data Acquisition & Sources
+
+The core dataset powering this routing engine was compiled by standardizing and merging spatial information from three major administrative sectors: Kathmandu, Bhaktapur, and Lalitpur. Ground-truth distance metrics were cross-referenced and synthesized from:
+* The official [Department of Roads (DOR) National Highway Data Portal](https://ssrn.dor.gov.np/national "DOR Highway Portal").
+* Spatial mapping references extracted from Google Maps and several secondary online transit tools.
+
+The unified, clean version of this compiled network map is available directly within this repository inside the [Kathmandu Road Distance Data Sheet](Kathmandu_Road_Distance_Data_Thimi.xlsx "Repository Data Sheet File").
 ---
 
 <a id="features"></a>
