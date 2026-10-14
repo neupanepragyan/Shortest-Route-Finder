@@ -150,12 +150,14 @@ Shortest-Route-Finder/
 
 <a id="future-improvements"></a>
 
-## 🔮 Future Improvements
+## 🔮Future Improvements
 
-- Load the road network from an external data file instead of embedding it.
 - Add more locations and roads across the valley.
 - Show a step-by-step animation of how Dijkstra's Algorithm explores the graph.
 - Display estimated travel time in addition to distance.
+- Integrate real-time traffic data to dynamically adjust travel time estimates, similar to Google Maps.
+- Provide alternative routes alongside the absolute shortest path by introducing other routing algorithms.
+
 
 ---
 
